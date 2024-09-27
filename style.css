@@ -1,0 +1,77 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(#191919, #323232);
+    display: flex;
+    align-items: center;
+}
+
+.maingame{
+    padding: 5vh;
+    height: 75vh;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 0.5vw;
+    perspective: 150vh;
+    background-color: whitesmoke;
+    border: 1vw solid white;
+    border-style: outset;
+}
+
+.card{
+    border: 0.125vw solid #191919;
+    width: 10vw;
+    height: 15vh;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .4s;
+}
+
+.card:active{
+    transform: scale(0.97);
+    transition: transform .5s;
+}
+
+.front-card, .back-card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.flip{
+    transform: rotateY(180deg);   
+}
+
+.front-card{
+    transform: rotateY(180deg);
+}
+
+.text{
+    color: whitesmoke;
+    display: grid;
+    height: 40vh;
+    font-weight: 5vh;
+    font-size: xx-large;
+}
+
+.player1text{
+    color: #c0c0c0;
+}
+
+.player2text{
+    color: #edeade;
+}
+
+.playerturntext{
+    font-style: italic;
+    text-decoration: underline;
+}
